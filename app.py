@@ -20,6 +20,10 @@ tasks = [
     }
 ]
 
+@app.route('/')
+def index():
+    return "landing page. HW"
+
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
     return jsonify({'tasks': tasks})
@@ -40,4 +44,5 @@ def get_coordinate(lat, longt):
 
 if __name__ == '__main__':
     app.run(debug=True)
+    app.run(host=0.0.0.0, port=8090)
 
