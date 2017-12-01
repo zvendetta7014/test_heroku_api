@@ -1,4 +1,4 @@
-#!./venv/bin/python
+#!/usr/bin/ python
 from flask import abort
 
 from flask import Flask, jsonify
